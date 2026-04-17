@@ -47,6 +47,7 @@ main {
 }
 
 .gallery-item {
+  cursor: pointer;
   background: var(--card-bg);
   border-radius: 16px;
   border: 1px solid var(--border-gray);
@@ -86,7 +87,6 @@ main {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-main);
-  /* Truncate title to 1 line */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -96,21 +96,16 @@ main {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.4;
-  /* Show only 2 lines of text then ellipsis */
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 /* Footer with Username and Date */
 .card-footer {
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
-  border-top: 1px solid #f0f0f0;
 }
 
 .user-name {
@@ -157,35 +152,6 @@ main {
   color: var(--primary-red);
 }
 
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 30px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-main);
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--primary-red);
-}
-
-.btn-login {
-  background: var(--text-main);
-  color: white;
-  border: none;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
 /* Footer Styles */
 .footer {
   margin-top: 60px;
@@ -223,5 +189,5 @@ main {
 @media (max-width: 600px) {
   .nav-links {
     display: none;
-  } /* Simplified for now */
+  }
 }
