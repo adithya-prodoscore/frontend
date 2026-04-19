@@ -13,4 +13,24 @@ export const fetchAllPins = async () => {
   }
 };
 
-export const fetchPin = async (id) => {};
+export const fetchPin = async (id) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/pins/${id}`);
+    return { data: response.data, error: null };
+  } catch (error) {
+    const errorMessage =
+      error.response?.data?.message || error.message || "Error fetching pins";
+    return { data: null, error: errorMessage };
+  }
+};
+
+export const deletePin = async (id) => {
+  try {
+    const response = await axios.delete(`${BASE_URL}/pins/${id}`);
+    return { data: response.data, error: null };
+  } catch (error) {
+    const errorMessage =
+      error.response?.data?.message || error.message || "Failed to delete pin";
+    return { data: null, error: errorMessage };
+  }
+};

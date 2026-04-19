@@ -6,19 +6,19 @@ const errorContainer = document.getElementById("error-container");
 
 const createPinCard = (pin) => {
   return `
+    <a href="single-pin.html?id=${pin.id}" class="gallery-item-link">
         <div class="gallery-item">
-                <div class="image-container">
-                    <img src="${pin.image_link}" alt="Wallpaper" />
-                </div>
-
-                <div class="card-content">
-                    <h3 class="card-title">${pin.title}</h3>
-
-                    <div class="card-footer">
+            <div class="image-container">
+                <img src="${pin.image_link}" alt="${pin.title}" />
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">${pin.title}</h3>
+                <div class="card-footer">
                     <span class="user-name">${pin.author}</span>
-                    </div>
                 </div>
-        </div>`;
+            </div>
+        </div>
+    </a>`;
 };
 
 async function init() {

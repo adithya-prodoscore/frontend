@@ -75,6 +75,11 @@ main {
   object-fit: cover;
 }
 
+.gallery-item-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Metadata Section */
 .card-content {
   padding: 16px;
@@ -216,4 +221,133 @@ main {
   margin: 0;
   font-weight: 500;
   font-family: sans-serif;
+}
+
+/* Header */
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+/* Single-pin.html styles */
+
+.pin-detail-view {
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.pin-detail-card {
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-gray);
+}
+
+.pin-detail-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.pin-detail-image {
+  flex: 1;
+}
+
+.pin-detail-image img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+.pin-detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.pin-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.pin-author {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* Back button style */
+.back-button-container {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .pin-detail-card {
+    flex-direction: column;
+  }
+}
+
+/* Base Buttons */
+.btn-primary,
+.btn-secondary {
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #e60023;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #ad001b;
+}
+
+.btn-secondary {
+  background-color: #efefef;
+  color: #111;
+}
+
+.btn-secondary:hover {
+  background-color: #e2e2e2;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-danger {
+  background-color: #efefef;
+  color: #333;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circular button */
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+  background-color: #ffebee; /* Light red bg */
+  color: #e60023; /* Pinterest Red icon */
 }
