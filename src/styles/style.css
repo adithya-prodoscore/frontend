@@ -191,3 +191,29 @@ main {
     display: none;
   }
 }
+
+/* Error message */
+
+#error-container {
+  max-width: 100%;
+  margin: 20px auto;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+}
+
+.error-hidden {
+  display: none !important;
+}
+
+.error-visible {
+  display: flex !important;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+#error-message {
+  margin: 0;
+  font-weight: 500;
+  font-family: sans-serif;
+}
